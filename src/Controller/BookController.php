@@ -17,6 +17,6 @@ class BookController extends AbstractController
         $booklist = $bookRepository ->findAll();
 
         $jsonBookList = $serializer->serialize($booklist, 'json');
-        return new JsonResponse([ $jsonBookList, Response::HTTP_OK, [], true ]);
+        return new JsonResponse( $jsonBookList, Response::HTTP_OK, [], true );
     }
 }
